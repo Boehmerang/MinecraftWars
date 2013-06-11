@@ -1,27 +1,19 @@
 package war.client.flag;
 
-import universalelectricity.core.vector.Vector3;
-
-import com.google.common.io.ByteArrayDataInput;
-import com.google.common.io.ByteArrayDataOutput;
-
-import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
-import dark.library.damage.EntityTileDamage;
-import dark.library.damage.IHpTile;
+
+import com.google.common.io.ByteArrayDataInput;
+import com.google.common.io.ByteArrayDataOutput;
+
+import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
 
 public class EntityFlag extends EntityLiving implements IEntityAdditionalSpawnData
 {
@@ -103,6 +95,8 @@ public class EntityFlag extends EntityLiving implements IEntityAdditionalSpawnDa
 			double x = this.host.posX + (1 * Math.cos(yaw));
 			double y = this.host.posY = 0.5;
 			double z = this.host.posZ + (1 * Math.sin(yaw));
+			this.setPosition(x, y, z);
+			this.setRotation(-yaw, 0);
 		}
 	}
 
@@ -140,20 +134,6 @@ public class EntityFlag extends EntityLiving implements IEntityAdditionalSpawnDa
 
 	@Override
 	public boolean canBeCollidedWith()
-	{
-		return false;
-	}
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	public boolean isInRangeToRenderVec3D(Vec3 par1Vec3)
-	{
-		return false;
-	}
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	public boolean isInRangeToRenderDist(double par1)
 	{
 		return false;
 	}
