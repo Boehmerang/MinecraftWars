@@ -1,0 +1,3 @@
+[submodule "Dark-Library"]
+	path = Dark-Library
+	url = git://github.com/DarkGuardsman/Dark-Library.git
