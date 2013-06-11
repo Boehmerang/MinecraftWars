@@ -1,6 +1,8 @@
 package war.client.flag;
 
-public class TileEntityFlagBase
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityFlagBase extends TileEntity
 {
 
 }
