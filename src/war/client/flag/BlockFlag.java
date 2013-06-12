@@ -1,6 +1,7 @@
 package war.client.flag;
 
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -37,5 +38,11 @@ public class BlockFlag extends BlockAdvanced
 		{
 			this.setBlockBounds(0, 0, 0, 1, .3f, 1);
 		}
+	}
+
+	@Override
+	public boolean onMachineActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int side, float hitX, float hitY, float hitZ)
+	{
+		return false;
 	}
 }
