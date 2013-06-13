@@ -42,6 +42,7 @@ public class mcWars
 	public static Item						itemFlagPole;
 	public static Item						itemFlagPoleTop;
 	public static Block						blockFlagPole;
+	
 	@Instance("mcWars")
 	public static mcWars instance = new mcWars();
 	
@@ -96,14 +97,5 @@ public class mcWars
 		
 		GameRegistry.registerTileEntity(tileEntityFlag.class, "TileFlag");
 	}
-	/*
-	 @SideOnly(Side.CLIENT)
-	 public void registerRenderThings()
-	 {
-		RenderingRegistry.registerBlockHandler(new BlockRenderingHandler());
-		//ClientRegistry.bindTileEntitySpecialRenderer(tileEntityCoinPress.class, new RenderCoinPress());
-		ClientRegistry.bindTileEntitySpecialRenderer(tileEntityFlag.class, new renderFlag());
-		
-	 }
-	 */
+
 }
