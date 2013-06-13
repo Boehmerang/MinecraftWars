@@ -7,11 +7,10 @@ LICENSE.txt
 CHANGELOG
 
 !/src/
-!/src/minecraft/mcWars/*
-/src/minecraft/
+/src/minecraft/*
 !/src/minecraft/mods/
-
-
+!/src/minecraft/murder/
+!/src/minecraft/mcWars/
 !src/minecraft/mods/mcWars/*
 
 !/resources/
