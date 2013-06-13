@@ -8,7 +8,7 @@ CHANGELOG
 
 !/src/
 !/src/minecraft/mcWars/*
-/src/minecraft/*
+/src/minecraft/
 !/src/minecraft/mods/
 
 
